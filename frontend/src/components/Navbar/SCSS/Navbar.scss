@@ -1,0 +1,75 @@
+.navbar {
+  color: white;
+  font-size: 1.4vmax;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+
+  &.scrolled {
+    background-color: var(--main-color);
+  }
+
+  .container {
+    padding: 0px 5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.9vmax;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 2.5vmax;
+        margin-right: 4vmax;
+      }
+
+      span {
+        margin-right: 2vmax;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin: 0px 1.5vmax;
+        cursor: pointer;
+      }
+
+      img {
+        height: 2.7vmax;
+        width: 2.7vmax;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .profile {
+        .options {
+          display: none;
+          background-color: var(--main-color);
+          border-radius: 5px;
+        }
+
+        span {
+          padding: 1vmax;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
