@@ -1,0 +1,52 @@
+.list {
+  width: 100%;
+  margin-top: 1vmax;
+}
+
+.list .listTitle {
+  color: white;
+  font-size: 2vmax;
+  font-weight: 500;
+  margin-left: 5vmax;
+}
+
+.list .wrapper {
+  position: relative;
+}
+
+.list .wrapper .sliderArrow {
+  width: 50px;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.5);
+  color: white;
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.list .wrapper .sliderArrow.left {
+  left: 0;
+}
+
+.list .wrapper .sliderArrow.right {
+  right: 0;
+}
+
+.list .wrapper .container {
+  margin-left: 5vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 1vmax;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/*# sourceMappingURL=List.css.map */
