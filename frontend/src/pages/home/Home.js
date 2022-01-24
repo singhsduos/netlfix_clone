@@ -2,7 +2,7 @@ import React from 'react';
 import Featured from '../../components/Featured/Featured';
 import List from '../../components/List/List';
 import Navbar from '../../components/Navbar/Navbar';
-import "./SCSS/Home/Home.css";
+import "./SCSS/Home.css";
 
 const Home = () => {
     return (
