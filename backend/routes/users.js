@@ -80,7 +80,6 @@ router.get("/", verify, async (req, res) => {
 
 // Get Users Stats
 router.get("/stats", async (req, res) => {
-    const today = new Date();
 
 
     try {

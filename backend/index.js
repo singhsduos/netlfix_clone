@@ -23,6 +23,9 @@ mongoose.connect(process.env.DB_URI, {
 app.use(express.json());
 app.use("/api/v1", authRoute);
 app.use("/api/v1/users", userRoute);
+app.use("/api/v1/movies", movieRoute);
+app.use("/api/v1/lists", listRoute);
+
 
 
 app.listen(8000, () => {
