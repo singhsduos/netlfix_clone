@@ -22,7 +22,7 @@ mongoose.connect(process.env.DB_URI, {
 // all of our routes will be prefixed with /api
 app.use(express.json());
 app.use("/api/v1", authRoute);
-app.use("/api/v1", userRoute);
+app.use("/api/v1/users", userRoute);
 
 
 app.listen(8000, () => {
