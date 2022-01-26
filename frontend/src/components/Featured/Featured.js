@@ -2,8 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 import { Button} from "@material-ui/core";
 import "./SCSS/Featured.css";
+import axios from 'axios';
 
-const Featured = ({type}) => {
+const Featured = ({ type }) => {
+    const [content, setContent] = useState({});
+
+    useEffect(() => {
+        const getRandomContent = async () => {
+          try {
+              const res = await axios.get(`api/movies/random?type=${type}`,
+                  {
+                      headers: {
+                          token:
+                              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWViZmIyNzNlMzc1NmU5NGQ1MzIzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzEyNDM1OCwiZXhwIjoxNjQzNTU2MzU4fQ.XkDqWyTKBhDULxL1eDst9aNncgjcpId1OVxm6FscGfE",
+                      },
+                  }
+              );
+              setContent(res.data[0]);
+          } catch (err) {
+              console.log(err);
+          }
+        }
+        getRandomContent();
+    }, [type]);
+    
+
     return (
         <div className='featured'>
             
@@ -29,16 +52,17 @@ const Featured = ({type}) => {
                 </div>
             )}
             <img
-                src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src={content.img}
                 alt=""
             />
             <div className="info">
                 
-
+                <img
+                    src={content.imgTitle}
+                    alt=""
+                />
                 <span className='desc'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aperiam ad asperiores minus. Unde quas dolorem quisquam qui voluptatibus,
-                    quam aliquam deleniti culpa suscipit maiores?
+                    {content.desc}
                 </span>
                 <div className="buttons">
                     <Button className='play'>
