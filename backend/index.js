@@ -21,10 +21,10 @@ mongoose.connect(process.env.DB_URI, {
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use(express.json());
-app.use("/api/v1", authRoute);
-app.use("/api/v1/users", userRoute);
-app.use("/api/v1/movies", movieRoute);
-app.use("/api/v1/lists", listRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/movies", movieRoute);
+app.use("/api/lists", listRoute);
 
 
 
