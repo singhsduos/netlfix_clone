@@ -28,6 +28,6 @@ app.use("/api/lists", listRoute);
 
 
 
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Backend server is running`);
 });
