@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Home from "./pages/home/Home.js";
 import Register from "./pages/register/Register";
 import Watch from "./pages/watch/Watch";
@@ -9,14 +9,13 @@ import {
     Routes,
     Navigate
 } from "react-router-dom";
-import { useContext } from "react";
 import { AuthContext } from "./authContext/AuthContext";
 import "./App.css";
 
 
 export default function App() {
 
-    const user = true;
+    const { user } = useContext(AuthContext);
     return (
         <>
             <Router>
@@ -26,9 +25,9 @@ export default function App() {
                     <Route exact path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
                     {user && (
                         <>
-                            <Route exact path="/movies" element={<Home type="movies" />} />
-                            <Route exact path="/series" element={<Home type="series" />} />
-                            <Route exact path="/watch" element={<Watch type="series" />} />
+                            <Route exact path="/movies" element={<Home type="movie" />} />
+                            <Route path="/series" element={<Home type="series" />} />
+                            <Route exact path="/watch" element={<Watch />} />
                         </>
                     )}
                 </Routes>

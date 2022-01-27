@@ -6,7 +6,7 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%), url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
 }
 
-.register .top .wrapper {
+.register .top {
   padding: 20px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,14 +19,8 @@
           justify-content: space-between;
 }
 
-.register .top .wrapper .logo {
+.register .top .logo {
   height: 4vmax;
-}
-
-.register .top .wrapper .loginButton {
-  background-color: red;
-  color: white;
-  border-radius: 5px !important;
 }
 
 .register .container {
@@ -100,5 +94,43 @@
   color: white;
   font-size: 1.5vmax;
   border-radius: 0px !important;
+}
+
+.or {
+  margin: 1vmax 0vmax;
+}
+
+.loginButton {
+  background-color: red !important;
+  color: white !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+}
+
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+*/
+@media screen and (max-width: 700px) {
+  .register .container h1,
+  .register .container h2,
+  .register .container p {
+    text-align: center;
+  }
+  .register .container .input {
+    width: 80%;
+    height: 5vmax;
+  }
+  .register .container .input input {
+    font-size: 2.3vmax;
+  }
+  .register .top {
+    padding: 20px 21px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=Register.css.map */

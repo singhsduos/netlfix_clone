@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Featured from '../../components/Featured/Featured';
 import List from '../../components/List/List';
 import Navbar from '../../components/Navbar/Navbar';
-import { useEffect, useState } from "react";
 import axios from "axios";
 import "./SCSS/Home.css";
 
@@ -35,7 +34,7 @@ const Home = ({ type }) => {
     return (
         <div className='home'>
             <Navbar />
-            <Featured type={type} />
+            <Featured type={type} setGenre={setGenre}/>
             {
                 lists.map((list) => (
                     <List key={list._id} list={list}/>  

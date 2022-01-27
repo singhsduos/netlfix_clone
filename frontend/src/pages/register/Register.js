@@ -1,12 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./SCSS/Register.css";
+
 
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
+    const navigate = useNavigate();
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -16,24 +19,30 @@ const Register = () => {
         setEmail(emailRef.current.value)
     }
 
-    const handleFinish = () => {
+    const routeChange = () => {
+        navigate("/login");
+    }
+    const handleFinish = async (e) => {
+        e.preventDefault();
         setPassword(passwordRef.current.value);
         setUsername(usernameRef.current.value);
-    }
+        try {
+            await axios.post("api/auth/register", { email, username, password });
+            navigate("/login");
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     return (
-        <div className='register'>
+        <div className="register">
+            
             <div className="top">
-                <div className="wrapper">
-                    <img
-                        className="logo"
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-                        alt="netflix"
-                    />
-                    <Button className='loginButton'>
-                        Sign-In
-                    </Button>
-                </div>
+                <img
+                    className="logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+                    alt=""
+                />
             </div>
 
             <div className="container">
@@ -44,8 +53,8 @@ const Register = () => {
                 </p>
                 {!email ? (
                     <div className="input">
-                        <input type="email" name="email" placeholder='email address' id="email" ref={emailRef} />
-                        <Button className='registerButton' onClick={handleStart}>
+                        <input type="email" placeholder="email address" ref={emailRef} />
+                        <Button className="registerButton" onClick={handleStart}>
                             Get Started
                         </Button>
                     </div>
@@ -59,8 +68,11 @@ const Register = () => {
                     </form>
                 )}
 
-            </div>
+                <b className='or'>OR</b>
 
+                <Button className="loginButton" onClick={routeChange}>Sign In</Button>
+
+            </div>
         </div>
     );
 };

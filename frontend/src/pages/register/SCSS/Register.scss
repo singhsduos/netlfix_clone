@@ -10,21 +10,13 @@
     url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
 
   .top {
-    .wrapper {
-      padding: 20px 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-      .logo {
-        height: 4vmax;
-      }
-
-      .loginButton {
-        background-color: red;
-        color: white;
-        border-radius: 5px !important;
-      }
+    .logo {
+      height: 4vmax;
     }
   }
 
@@ -78,8 +70,49 @@
         color: white;
         font-size: 1.5vmax;
         border-radius: 0px !important;
-
       }
     }
   }
+}
+
+.or {
+  margin: 1vmax 0vmax;
+}
+
+.loginButton {
+  background-color: red !important;
+  color: white !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+}
+
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+*/
+
+@media screen and (max-width: 700px) {
+  .register .container {
+    h1,
+    h2,
+    p {
+      text-align: center;
+    }
+
+    .input {
+      width: 80%;
+      height: 5vmax;
+
+      input {
+        font-size: 2.3vmax;
+      }
+    }
+  }
+
+  .register .top {
+    padding: 20px 21px;
+    justify-content: flex-start;
+}
 }
