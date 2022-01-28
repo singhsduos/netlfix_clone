@@ -27,7 +27,7 @@ const Register = () => {
         setPassword(passwordRef.current.value);
         setUsername(usernameRef.current.value);
         try {
-            await axios.post("https://cors-anywhere.herokuapp.com/https://neelesh-netflix.herokuapp.com/api/auth/register", { email, username, password });
+            await axios.post("https://neelesh-netflix.herokuapp.com/api/auth/register", { email, username, password });
             navigate("/login");
         } catch (err) {
             console.log(err);

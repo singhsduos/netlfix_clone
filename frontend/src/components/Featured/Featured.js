@@ -10,7 +10,7 @@ const Featured = ({ type, setGenre }) => {
     useEffect(() => {
         const getRandomContent = async () => {
           try {
-              const res = await axios.get(`https://cors-anywhere.herokuapp.com/https://neelesh-netflix.herokuapp.com/api/movies/random?type=${type}`,
+              const res = await axios.get(`https://neelesh-netflix.herokuapp.com/api/movies/random?type=${type}`,
                   {
                       headers: {
                           token:
