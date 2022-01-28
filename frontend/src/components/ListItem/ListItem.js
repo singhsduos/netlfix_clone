@@ -9,7 +9,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./SCSS/ListItem.css";
 
-const ListItem = ({ index,item }) => {
+const ListItem = ({ index, item }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [movie, setMovie] = useState({});
 
@@ -19,9 +19,11 @@ const ListItem = ({ index,item }) => {
                 const res = await axios.get("api/movies/find/" + item, {
                     headers: {
                         token:
-                            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWViZmIyNzNlMzc1NmU5NGQ1MzIzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzEyNDM1OCwiZXhwIjoxNjQzNTU2MzU4fQ.XkDqWyTKBhDULxL1eDst9aNncgjcpId1OVxm6FscGfE",
+                            "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
                     },
-                });
+                }
+
+                );
                 setMovie(res.data);
             } catch (err) {
                 console.log(err);
@@ -32,47 +34,47 @@ const ListItem = ({ index,item }) => {
 
     return (
 
-        <Link to="/watch" state={{movie:movie}}>
-    
-        <div className='listItem'
-            style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+        <Link to="/watch" state={{ movie: movie }}>
 
-        >
-            <img
-                src={movie.img}
-                alt=""
-            />
-            {isHovered && (
-                <>
-                    <video src={movie.trailer} autoPlay={true} loop muted typeof='video/mp4' preload="auto"/>
+            <div className='listItem'
+                style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
 
-                    <div className="itemInfo">
-                        <div className="icons">
-                            <PlayArrow className="icon" />
-                            <Add className="icon" />
-                            <ThumbUpAltOutlined className="icon" />
-                            <ThumbDownOutlined className="icon" />
+            >
+                <img
+                    src={movie.img}
+                    alt=""
+                />
+                {isHovered && (
+                    <>
+                        <video src={movie.trailer} autoPlay={true} loop muted typeof='video/mp4' preload="auto" />
+
+                        <div className="itemInfo">
+                            <div className="icons">
+                                <PlayArrow className="icon" />
+                                <Add className="icon" />
+                                <ThumbUpAltOutlined className="icon" />
+                                <ThumbDownOutlined className="icon" />
+                            </div>
+                            <div className="itemInfoTop">
+                                <span>{movie.title}</span>
+                                <span className="limit">+{movie.limit}</span>
+                                <span>{movie.year}</span>
+                            </div>
+
+                            <div className="desc">
+                                {movie.desc}
+                            </div>
+
+                            <div className="genre">
+                                {movie.genre}
+                            </div>
+
                         </div>
-                        <div className="itemInfoTop">
-                            <span>{movie.duration}</span>
-                            <span className="limit">+{movie.limit}</span>
-                            <span>{movie.year}</span>
-                        </div>
 
-                        <div className="desc">
-                          {movie.desc}
-                        </div>
-
-                        <div className="genre">
-                          {movie.genre}
-                        </div>
-
-                    </div>
-
-                </>
-            )}
+                    </>
+                )}
             </div>
 
         </Link>

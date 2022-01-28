@@ -17,7 +17,7 @@ const Home = ({ type }) => {
                     {
                         headers: {
                             token:
-                                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWViZmIyNzNlMzc1NmU5NGQ1MzIzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzEyNDM1OCwiZXhwIjoxNjQzNTU2MzU4fQ.XkDqWyTKBhDULxL1eDst9aNncgjcpId1OVxm6FscGfE",
+                                "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
                         },
                     }
                 );

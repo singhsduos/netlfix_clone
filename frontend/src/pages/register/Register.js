@@ -53,7 +53,7 @@ const Register = () => {
                 </p>
                 {!email ? (
                     <div className="input">
-                        <input type="email" placeholder="email address" ref={emailRef} />
+                        <input type="email" placeholder="Email address" ref={emailRef} />
                         <Button className="registerButton" onClick={handleStart}>
                             Get Started
                         </Button>

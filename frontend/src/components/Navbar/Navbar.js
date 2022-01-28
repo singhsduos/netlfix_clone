@@ -43,7 +43,7 @@ const Navbar = () => {
                     <Search className='icon' />
                     <span>KID</span>
                     <Notifications className='icon' />
-                    <img src="https://res.cloudinary.com/betterkart/image/upload/v1642687502/avatars/ytby409w0txcp4ihr4tk.png"
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632/84c20033850498.56ba69ac290ea.png"
                         alt="user-profile-pic"
                     />
                     <div className="profile">

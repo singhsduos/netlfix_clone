@@ -48,6 +48,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 5px;
+  height: 300px;
 }
 
 .listItem:hover .itemInfo .icons {
