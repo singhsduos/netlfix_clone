@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     const getStats = async () => {
       try {
-        const res = await axios.get("api/users/stats", {
+        const res = await axios.get("https://neelesh-netflix.herokuapp.com/api/users/stats", {
           headers: {
             token:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWViZmIyNzNlMzc1NmU5NGQ1MzIzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzEyNDM1OCwiZXhwIjoxNjQzNTU2MzU4fQ.XkDqWyTKBhDULxL1eDst9aNncgjcpId1OVxm6FscGfE",

@@ -9,7 +9,7 @@ export default function WidgetSm() {
   useEffect(() => {
     const getNewUsers = async () => {
       try {
-        const res = await axios.get("api/users?new=true", {
+        const res = await axios.get("https://neelesh-netflix.herokuapp.com/api/users?new=true", {
           headers: {
             token:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWViZmIyNzNlMzc1NmU5NGQ1MzIzNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MzEyNDM1OCwiZXhwIjoxNjQzNTU2MzU4fQ.XkDqWyTKBhDULxL1eDst9aNncgjcpId1OVxm6FscGfE",

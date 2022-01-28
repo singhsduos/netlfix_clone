@@ -29,7 +29,7 @@ export const getMovies = async (dispatch) => {
 export const createMovie = async (movie, dispatch) => {
     dispatch(createMovieStart());
     try {
-        const res = await axios.post("api/movies/", movie, {
+        const res = await axios.post("https://neelesh-netflix.herokuapp.com/api/movies/", movie, {
             headers: {
                 token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
             },
