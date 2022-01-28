@@ -10,8 +10,9 @@ import {
     Navigate
 } from "react-router-dom";
 import { AuthContext } from "./authContext/AuthContext";
-import "./SCSS/App.css";
 import { FooterContainer } from './components/Footer/FooterContainer.js';
+import NotFound from "./pages/notFound/NotFound.js";
+import "./SCSS/App.css";
 
 
 export default function App() {
@@ -22,15 +23,16 @@ export default function App() {
             <Router>
                 <Routes>
                     <Route exact path="/" element={user ? <Home /> : <Navigate to="/register" />} />
-                    <Route exact path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
-                    <Route exact path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
+                    <Route  path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
+                    <Route  path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
                     {user && (
                         <>
                             <Route exact path="/movies" element={<Home type="movie" />} />
                             <Route path="/series" element={<Home type="series" />} />
                             <Route exact path="/watch" element={<Watch />} />
                         </>
-                    )}
+                    )};
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
                 <FooterContainer/>
             </Router>

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+.page_404 {
+  padding: 40px 0 !important;
+  background: #fff !important;
+  font-family: "Arvo", serif !important;
+  color: #333;
+}
+
+.page_404 img {
+  width: 100% !important;
+}
+
+.page_404 .four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px !important;
+  background-position: center !important;
+}
+
+.page_404 .four_zero_four_bg h1 {
+  font-size: 80px !important;
+  text-align: center;
+  font-family: "Arvo", serif !important;
+}
+
+.page_404 .contant_box_404 {
+  margin-top: -50px !important;
+  text-align: center;
+}
+
+.page_404 .contant_box_404 h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  font-family: "Arvo", serif !important;
+}
+
+.page_404 .contant_box_404 .link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Arvo', serif;
+}
+/*# sourceMappingURL=PageNotFound.css.map */
