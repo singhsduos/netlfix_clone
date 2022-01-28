@@ -13,7 +13,7 @@ const Home = ({ type }) => {
         const getRandomLists = async () => {
             try {
                 const res = await axios.get(
-                    `https://neelesh-netflix.herokuapp.com/api/lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`,
+                    `https://cors-anywhere.herokuapp.com/https://neelesh-netflix.herokuapp.com/api/lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`,
                     {
                         headers: {
                             token:
