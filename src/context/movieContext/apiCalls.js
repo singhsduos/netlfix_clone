@@ -14,7 +14,7 @@ import {
 export const getMovies = async (dispatch) => {
     dispatch(getMoviesStart());
     try {
-        const res = await axios.get("api/movies/", {
+        const res = await axios.get("https://neelesh-netflix.herokuapp.com/api/movies/", {
             headers: {
                 token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
             },
@@ -31,7 +31,7 @@ export const createMovie = async (movie, dispatch) => {
     try {
         const res = await axios.post("https://neelesh-netflix.herokuapp.com/api/movies/", movie, {
             headers: {
-                token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+                token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZjQxMWEzZGVjNTA0MTg1ZTY2MmY4MCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDMzODUyNjksImV4cCI6MTY0MzgxNzI2OX0.16ria1jF86RNwg6GExlYGbLqLsPNqBqkB9ZCxtI6dkE",
             },
         });
         dispatch(createMovieSuccess(res.data));
@@ -44,7 +44,7 @@ export const createMovie = async (movie, dispatch) => {
 export const deleteMovie = async (id, dispatch) => {
     dispatch(deleteMovieStart());
     try {
-        await axios.delete("api/movies/" + id, {
+        await axios.delete("https://neelesh-netflix.herokuapp.com/api/movies/" + id, {
             headers: {
                 token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
             },
