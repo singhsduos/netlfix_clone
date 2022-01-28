@@ -37,7 +37,7 @@ export function FooterContainer() {
                 </Footer.Column>
             </Footer.Row>
             <Footer.Break />
-            <Footer.Text>Netflix United Kingdom</Footer.Text>
+            <Footer.Text>Netflix India</Footer.Text>
         </Footer>
     );
 }
