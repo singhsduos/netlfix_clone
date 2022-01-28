@@ -12,6 +12,7 @@
     "netlify-cli": "^8.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-favicon": "^0.0.25",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "styled-components": "^5.1.1",
