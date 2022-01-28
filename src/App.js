@@ -12,7 +12,6 @@ import ListList from "./pages/listList/ListList.js";
 import List from "./pages/list/List.js";
 import NewList from "./pages/newList/NewList.js";
 import MovieList from "./pages/movieList/MovieList.js";
-import { Movie } from "@material-ui/icons";
 import Movies from "./pages/movie/Movie";
 import NewMovie from "./pages/newMovie/NewMovie.js";
 import {useContext} from "react";
