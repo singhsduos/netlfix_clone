@@ -1,6 +1,6 @@
 .listItem {
-  width: 22.5vmax;
-  height: 13vmax;
+  width: 225px;
+  height: 120px;
   background-color: var(--main-color);
   margin-right: 5px;
   overflow: hidden;
@@ -17,7 +17,7 @@
 
 .listItem video {
   width: 100%;
-  height: 14vmax;
+  height: 140px;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
@@ -26,8 +26,8 @@
 }
 
 .listItem:hover {
-  width: 32.5vmax;
-  height: 31vmax;
+  width: 325px;
+  height: 300px;
   -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
           box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
   border-radius: 5px;
@@ -36,7 +36,7 @@
 }
 
 .listItem:hover img {
-  height: 14vmax;
+  height: 140px;
 }
 
 .listItem:hover .itemInfo {

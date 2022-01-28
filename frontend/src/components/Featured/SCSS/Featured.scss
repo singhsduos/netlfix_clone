@@ -1,3 +1,5 @@
+@import "../../../SCSS/App.scss";
+
 .featured {
   height: 90vh;
   position: relative;
@@ -17,9 +19,13 @@
       background-color: var(--main-color);
       border: 1px solid white;
       color: white;
-      margin-left: 2vmax;
+      margin-left: 20px;
       padding: 5px;
     }
+  }
+
+  #genre {
+    z-index: 2;
   }
 
   img {
@@ -38,21 +44,26 @@
     flex-direction: column;
 
     img {
-      width: 40vmax;
+      width: 40vw;
+      margin-top: 10vmax;
     }
 
     .desc {
       margin: 2vmax 0px;
+
+      @include mobile {
+        width: 60vw;
+      }
     }
 
     .buttons {
       display: flex;
 
       button {
-        padding: 1vmax 2vmax !important;
+       padding: 10px 20px !important;
         border-radius: 5px !important;
         font-weight: 500 !important;
-        margin-right: 1vmax !important;
+        margin-right: 10px !important;
 
         &.play {
           background-color: white;

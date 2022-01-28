@@ -24,4 +24,84 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+*/
+@media screen and (max-width: 700px) {
+  html,
+  body {
+    margin: 0 !important;
+  }
+  .watch .back {
+    top: 38px;
+    right: -10px;
+    left: auto;
+    z-index: 53;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
+  .watch .video {
+    position: absolute !important;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+    -webkit-transform-origin: bottom left !important;
+            transform-origin: bottom left !important;
+    width: 100vh !important;
+    height: 100vw !important;
+    margin-top: -100vw !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    z-index: 4 !important;
+    visibility: visible !important;
+  }
+  :not(:root):-webkit-full-screen,
+  video:-webkit-full-screen {
+    position: absolute !important;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+    -webkit-transform-origin: bottom left !important;
+            transform-origin: bottom left !important;
+    margin-top: -100vw !important;
+    object-fit: contain !important;
+    z-index: 4 !important;
+    visibility: visible !important;
+  }
+  :not(:root):-moz-full-screen,
+  video:-moz-full-screen {
+    position: absolute !important;
+    transform: rotate(90deg) !important;
+    transform-origin: bottom left !important;
+    margin-top: -100vw !important;
+    object-fit: contain !important;
+    z-index: 4 !important;
+    visibility: visible !important;
+  }
+  :not(:root):-ms-fullscreen,
+  video:-ms-fullscreen {
+    position: absolute !important;
+    transform: rotate(90deg) !important;
+    transform-origin: bottom left !important;
+    margin-top: -100vw !important;
+    object-fit: contain !important;
+    z-index: 4 !important;
+    visibility: visible !important;
+  }
+  :not(:root):fullscreen,
+  video:fullscreen {
+    position: absolute !important;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+    -webkit-transform-origin: bottom left !important;
+            transform-origin: bottom left !important;
+    margin-top: -100vw !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    z-index: 4 !important;
+    visibility: visible !important;
+  }
+}
 /*# sourceMappingURL=Watch.css.map */

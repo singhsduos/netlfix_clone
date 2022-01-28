@@ -1,13 +1,14 @@
 .list {
   width: 100%;
   margin-top: 1vmax;
+  margin-bottom: 1vmax;
 }
 
 .list .listTitle {
   color: white;
-  font-size: 2vmax;
+  font-size: 20px;
   font-weight: 500;
-  margin-left: 5vmax;
+  margin-left: 50px;
 }
 
 .list .wrapper {
@@ -36,14 +37,14 @@
 }
 
 .list .wrapper .container {
-  margin-left: 5vmax;
+  margin-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 10px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-top: 1vmax;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   -webkit-transition: all 1s ease;

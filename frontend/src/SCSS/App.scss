@@ -10,3 +10,15 @@
 a:-webkit-any-link {
     text-decoration: none !important;
 }
+
+@mixin tablet {
+  @media (max-width: 708px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

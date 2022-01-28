@@ -10,7 +10,8 @@ import {
     Navigate
 } from "react-router-dom";
 import { AuthContext } from "./authContext/AuthContext";
-import "./App.css";
+import "./SCSS/App.css";
+import { FooterContainer } from './components/Footer/FooterContainer.js';
 
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
                         </>
                     )}
                 </Routes>
+                <FooterContainer/>
             </Router>
         </>
     );

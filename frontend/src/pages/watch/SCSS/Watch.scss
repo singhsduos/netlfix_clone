@@ -19,3 +19,51 @@
     object-fit: cover;
   }
 }
+
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+*/
+
+@media screen and (max-width: 700px) {
+  html,
+  body {
+    margin: 0 !important;
+  }
+
+  .watch {
+    .back {
+      top: 38px;
+      right: -10px;
+      left: auto;
+      z-index: 53;
+      transform: rotate(90deg) !important;
+    }
+
+    .video {
+      position: absolute !important;
+      transform: rotate(90deg) !important;
+      transform-origin: bottom left !important;
+      width: 100vh !important;
+      height: 100vw !important;
+      margin-top: -100vw !important;
+      object-fit: cover !important;
+      z-index: 4 !important;
+      visibility: visible !important;
+    }
+  }
+
+  :not(:root):fullscreen,
+  video:fullscreen {
+    position: absolute !important;
+    transform: rotate(90deg) !important;
+    transform-origin: bottom left !important;
+ 
+    margin-top: -100vw !important;
+    object-fit: contain !important;
+    z-index: 4 !important;
+    visibility: visible !important;
+  }
+}

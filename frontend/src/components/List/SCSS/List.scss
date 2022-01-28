@@ -1,12 +1,13 @@
 .list {
   width: 100%;
   margin-top: 1vmax;
+  margin-bottom: 1vmax;
 
   .listTitle {
     color: white;
-    font-size: 2vmax;
+    font-size: 20px;
     font-weight: 500;
-    margin-left: 5vmax;
+    margin-left: 50px;
   }
 
   .wrapper {
@@ -34,10 +35,10 @@
     }
 
     .container {
-      margin-left: 5vmax;
+      margin-left: 50px;
       display: flex;
+      margin-top: 10px;
       width: max-content;
-      margin-top: 1vmax;
       transform: translateX(0px);
       transition: all 1s ease;
     }

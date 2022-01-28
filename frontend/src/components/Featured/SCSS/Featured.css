@@ -1,3 +1,16 @@
+:root {
+  --main-color: #0b0b0b;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+a:-webkit-any-link {
+  text-decoration: none !important;
+}
+
 .featured {
   height: 90vh;
   position: relative;
@@ -23,8 +36,12 @@
   background-color: var(--main-color);
   border: 1px solid white;
   color: white;
-  margin-left: 2vmax;
+  margin-left: 20px;
   padding: 5px;
+}
+
+.featured #genre {
+  z-index: 2;
 }
 
 .featured img {
@@ -50,11 +67,18 @@
 }
 
 .featured .info img {
-  width: 40vmax;
+  width: 40vw;
+  margin-top: 10vmax;
 }
 
 .featured .info .desc {
   margin: 2vmax 0px;
+}
+
+@media (max-width: 480px) {
+  .featured .info .desc {
+    width: 60vw;
+  }
 }
 
 .featured .info .buttons {
@@ -64,10 +88,10 @@
 }
 
 .featured .info .buttons button {
-  padding: 1vmax 2vmax !important;
+  padding: 10px 20px !important;
   border-radius: 5px !important;
   font-weight: 500 !important;
-  margin-right: 1vmax !important;
+  margin-right: 10px !important;
 }
 
 .featured .info .buttons button.play {

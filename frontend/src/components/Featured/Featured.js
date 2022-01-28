@@ -25,8 +25,6 @@ const Featured = ({ type, setGenre }) => {
         }
         getRandomContent();
     }, [type]);
-
-    console.log(content.img)
     
 
     return (
