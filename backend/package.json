@@ -9,6 +9,7 @@
   "author": "Neelesh Singh",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
