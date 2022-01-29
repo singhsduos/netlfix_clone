@@ -12,7 +12,7 @@ a:-webkit-any-link {
 }
 
 @mixin tablet {
-  @media (max-width: 708px) {
+  @media (max-width: 808px) {
     @content;
   }
 }

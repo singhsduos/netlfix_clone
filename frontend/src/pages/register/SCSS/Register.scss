@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
+   position: fixed;
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
@@ -101,12 +102,25 @@
       text-align: center;
     }
 
+    h1{
+      font-size: 3.7vmax;
+    }
+
+    h2{
+      font-size: 2.7vmax;
+    }
+
+    p{
+          font-size: 1.4vmax;
+    }
+
     .input {
       width: 80%;
       height: 5vmax;
 
       input {
-        font-size: 2.3vmax;
+        font-size: 1.9vmax;
+        width: 100%;
       }
     }
   }

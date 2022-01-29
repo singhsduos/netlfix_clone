@@ -40,9 +40,15 @@ a:-webkit-any-link {
   height: 5.9vmax;
 }
 
-@media (max-width: 708px) {
+@media (max-width: 808px) {
   .navbar .container {
     padding: 0px 4vmax;
+  }
+}
+
+@media (max-width: 808px) {
+  .navbar .container .navbarmainLinks {
+    display: block !important;
   }
 }
 
@@ -71,15 +77,9 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
-@media (max-width: 708px) {
+@media (max-width: 808px) {
   .navbar .container .left span {
     display: none;
-  }
-}
-
-@media (max-width: 708px) {
-  .navbar .container .left span.navbarmainLinks {
-    display: block;
   }
 }
 
@@ -95,6 +95,12 @@ a:-webkit-any-link {
 .navbar .container .right .icon {
   margin: 0px 1.5vmax;
   cursor: pointer;
+}
+
+@media (max-width: 808px) {
+  .navbar .container .right .span {
+    display: none;
+  }
 }
 
 .navbar .container .right img {
@@ -126,5 +132,12 @@ a:-webkit-any-link {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
+}
+
+@media (max-width: 480px) {
+  .navbar .container .right .profile:hover .options {
+    right: 1vmax;
+    top: 5vmax;
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */

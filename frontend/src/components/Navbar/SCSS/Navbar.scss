@@ -24,6 +24,12 @@
       padding: 0px 4vmax;
     }
 
+    .navbarmainLinks {
+      @include tablet {
+        display: block !important;
+      }
+    }
+
     .left {
       display: flex;
       align-items: center;
@@ -44,12 +50,6 @@
         @include tablet {
           display: none;
         }
-
-        &.navbarmainLinks {
-          @include tablet {
-            display: block;
-          }
-        }
       }
     }
 
@@ -60,6 +60,12 @@
       .icon {
         margin: 0px 1.5vmax;
         cursor: pointer;
+      }
+
+      .span {
+        @include tablet {
+          display: none;
+        }
       }
 
       img {
@@ -87,6 +93,11 @@
             display: flex;
             flex-direction: column;
             position: absolute;
+
+            @include mobile {
+              right: 1vmax;
+              top: 5vmax;
+            }
           }
         }
       }

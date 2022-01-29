@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
+  position: fixed;
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
@@ -85,12 +86,14 @@
 
 @media screen and (max-width: 700px) {
   .login .container form {
-    width: 40vmax;
-    height: 40vmax;
+    width: auto;
+    height: 40%;
+    margin: 2rem;
   }
 
   .login .container form input {
     font-size: 2.1vmax;
+    margin: 0.2vmax 0rem;
   }
 
   .login .top .wrapper {
