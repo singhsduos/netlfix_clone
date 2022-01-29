@@ -24,7 +24,8 @@
     }
   }
 
-  #genre,.type {
+  #genre,
+  .type {
     z-index: 2;
   }
 
@@ -61,7 +62,7 @@
       width: 20rem;
 
       button {
-       padding: 10px 20px !important;
+        padding: 10px 20px !important;
         border-radius: 5px !important;
         font-weight: 500 !important;
         margin-right: 10px !important;
@@ -77,5 +78,28 @@
         }
       }
     }
+  }
+}
+
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+*/
+
+@media screen and (max-width: 320px) {
+  .featured .info .buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+  }
+
+  .featured .info .buttons button.more {
+    margin: 10px 0px;
   }
 }
