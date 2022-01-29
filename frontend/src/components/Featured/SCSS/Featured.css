@@ -40,7 +40,7 @@ a:-webkit-any-link {
   padding: 5px;
 }
 
-.featured #genre {
+.featured #genre, .featured .type {
   z-index: 2;
 }
 
@@ -85,6 +85,7 @@ a:-webkit-any-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 20rem;
 }
 
 .featured .info .buttons button {

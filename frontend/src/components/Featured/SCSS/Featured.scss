@@ -24,7 +24,7 @@
     }
   }
 
-  #genre {
+  #genre,.type {
     z-index: 2;
   }
 
@@ -58,6 +58,7 @@
 
     .buttons {
       display: flex;
+      width: 20rem;
 
       button {
        padding: 10px 20px !important;

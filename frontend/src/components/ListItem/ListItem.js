@@ -32,6 +32,7 @@ const ListItem = ({ index, item }) => {
         getMovie();
     }, [item]);
 
+
     return (
 
         <Link to="/watch" state={{ movie: movie }}>
@@ -43,8 +44,8 @@ const ListItem = ({ index, item }) => {
 
             >
                 <img
-                    src={movie.img}
-                    alt=""
+                    src={movie?.imgSm}
+                    alt="Thumbnail"
                 />
                 {isHovered && (
                     <>
@@ -61,6 +62,7 @@ const ListItem = ({ index, item }) => {
                                 <span>{movie.title}</span>
                                 <span className="limit">+{movie.limit}</span>
                                 <span>{movie.year}</span>
+                                <span>{movie.duration}</span>
                             </div>
 
                             <div className="desc">
