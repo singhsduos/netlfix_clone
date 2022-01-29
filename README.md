@@ -26,11 +26,11 @@ This is a Netflix clone where you can watch movies or series.
 [![MONGODB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 
 ## ScreenShot
-![Screenshot_20220129_161232](https://user-images.githubusercontent.com/32032008/151658109-3a6e4b35-4d00-42ae-a0eb-bd8ddc89b5c0.png)
-![Screenshot_20220129_161302](https://user-images.githubusercontent.com/32032008/151658112-0118ce21-4063-4a7c-a921-2f652c05bc3d.png)
-![Screenshot_20220129_161331](https://user-images.githubusercontent.com/32032008/151658114-375bcf61-9717-4f83-ba48-9099d35c5e5d.png)
-![Screenshot_20220129_161210](https://user-images.githubusercontent.com/32032008/151658104-72766a7f-b7ea-40e7-a177-0f0c118e0e34.png)
-![Screenshot_20220129_161219](https://user-images.githubusercontent.com/32032008/151658107-a21e3a6d-5bcc-4730-b3e7-6d9d007bd794.png)
+![Screenshot_20220129_161210](https://user-images.githubusercontent.com/32032008/151658135-ffd4d149-8a55-49cd-ad85-7e7d5eee856c.png)
+![Screenshot_20220129_161219](https://user-images.githubusercontent.com/32032008/151658142-466ed84e-4b28-4821-bee0-5455fd40ff52.png)
+![Screenshot_20220129_161302](https://user-images.githubusercontent.com/32032008/151658145-4c7e1793-de81-40f9-8b00-806051108309.png)
+![Screenshot_20220129_161331](https://user-images.githubusercontent.com/32032008/151658154-fba14f1f-f17e-492e-9bf6-89dab23035d2.png)
+
 
 
 
