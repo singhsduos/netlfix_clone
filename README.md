@@ -37,6 +37,10 @@ This is a Netflix clone where you can watch movies or series.
 
 ## Demo Video
 
+https://user-images.githubusercontent.com/32032008/151661389-59a572b2-9674-4595-9a3d-09d2dc0ea7db.mp4
+
+
+
 
 
 
