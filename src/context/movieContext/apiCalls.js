@@ -31,7 +31,7 @@ export const createMovie = async (movie, dispatch) => {
     try {
         const res = await axios.post("https://neelesh-netflix.herokuapp.com/api/movies/", movie, {
             headers: {
-                token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZjQxMWEzZGVjNTA0MTg1ZTY2MmY4MCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDMzODUyNjksImV4cCI6MTY0MzgxNzI2OX0.16ria1jF86RNwg6GExlYGbLqLsPNqBqkB9ZCxtI6dkE",
+                token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
             },
         });
         dispatch(createMovieSuccess(res.data));
