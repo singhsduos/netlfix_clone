@@ -22,6 +22,7 @@ export default function App() {
         <>
             <Router>
                 <Routes>
+                             <>
                              <Route exact path="/" element={<Home /> } />
                             <Route exact path="/movies" element={<Home type="movie" />} />
                             <Route path="/series" element={<Home type="series" />} />
@@ -47,6 +48,7 @@ export default function App() {
 //                         </>
 //                     )};
                     <Route path='*' element={<NotFound />} />
+                    </>    
                 </Routes>
                 <FooterContainer/>
             </Router>
