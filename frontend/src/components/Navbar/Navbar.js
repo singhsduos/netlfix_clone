@@ -3,6 +3,7 @@ import { ArrowDropDown, Notifications, Search } from "@material-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../authContext/AuthContext";
 import { logout } from "../../authContext/AuthActions";
+import { useAlert } from "react-alert";
 import "./SCSS/Navbar.css";
 
 
@@ -10,6 +11,7 @@ import "./SCSS/Navbar.css";
 const Navbar = () => {
 
     const navigate = useNavigate();
+    const alert = useAlert();
 
     // change the navbar color onscrolling
     const [isScrolled, setScrolled] = useState(false);
@@ -23,6 +25,7 @@ const Navbar = () => {
     const logOutFunc = () => {
         dispatch(logout());
         navigate("/login");
+        alert.success("Logout Successfully");
     }
 
 

@@ -58,7 +58,8 @@ const Register = () => {
             placeholder="Email address"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <Button
+
+          <Button 
             className="registerButton"
             onClick={(e) => switchTabs(e, "usernameTab")}
           >

@@ -35,8 +35,9 @@ export const register = async (userData, dispatch, alert, navigate) => {
     
     dispatch(registerSuccess(data));
     navigate("/login");
+    alert.success("Register Successfully, Please Login Now");
   } catch (error) {
-     alert.error(error.response.data.message);  
+     alert.error("Some error occured, Please try again!");  
     dispatch(registerFailure(error.response.data.message));
   }
 };
