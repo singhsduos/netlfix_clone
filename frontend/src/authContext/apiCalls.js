@@ -22,20 +22,19 @@ export const login = async (user, dispatch, alert) => {
 
 // Register
 export const register = async (userData, dispatch, alert, navigate) => {
+  dispatch(registerStart());
   try {
-    dispatch(registerStart());
 
-    const config = { headers: { "Content-Type": "multipart/form-data" } };
+    // const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-    const { data } = await axios.post(
+    const res = await axios.post(
       `https://neelesh-netflix.herokuapp.com/api/auth/register`,
-      userData,
-      config
+      userData
     );
     
-    dispatch(registerSuccess(data));
+    dispatch(registerSuccess(res.data));
     navigate("/login");
-    alert.success("Register Successfully, Please Login Now");
+    alert.success("Register Successfully, Please Login Again!");
   } catch (error) {
      alert.error("Some error occured, Please try again!");  
     dispatch(registerFailure(error.response.data.message));
