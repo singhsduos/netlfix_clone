@@ -5,8 +5,21 @@ export const loginSuccess = (user) => ({
     type: "LOGIN_SUCCESS",
     payload: user,
 });
-export const loginFailure = () => ({
-    type: "LOGIN_FAILURE",
+export const loginFailure = async (msg) => ({
+  type: "LOGIN_FAILURE",
+  payload: msg,
+});
+
+export const registerStart = () => ({
+    type: "REGISTER_START",
+});
+export const registerSuccess = (user) => ({
+  type: "REGISTER_SUCCESS",
+  payload: user,
+});
+export const registerFailure = async (msg) => ({
+    type: "REGISTER_FAILURE",
+    payload: msg,
 });
 
 //logout

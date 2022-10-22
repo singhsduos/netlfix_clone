@@ -3,17 +3,19 @@ import { login } from "../../authContext/apiCalls";
 import { AuthContext } from "../../authContext/AuthContext";
 import {Link} from "react-router-dom";
 import { Button } from "@material-ui/core";
+import { useAlert } from "react-alert";
 import "./SCSS/Login.css";
 
 
 const Login = () => {
+    const alert = useAlert();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { dispatch } = useContext(AuthContext);
 
     const handleLogin = (e) => {
         e.preventDefault();
-        login({ email, password }, dispatch);
+        login({ email, password }, dispatch, alert);
     };
 
     return (

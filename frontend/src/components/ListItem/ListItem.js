@@ -44,7 +44,7 @@ const ListItem = ({ index, item }) => {
 
             >
                 <img
-                    src={movie?.imgSm}
+                    src={movie.imgSm}
                     alt="Thumbnail"
                 />
                 {isHovered && (
