@@ -17,7 +17,7 @@ import "./SCSS/App.css";
 
 export default function App() {
 
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
     return (
       <>
         <Router>
@@ -41,7 +41,8 @@ export default function App() {
                 <Route path="/series" element={<Home type="series" />} />
                 <Route exact path="/watch" element={<Watch />} />
               </>
-            )};
+            )}
+            ;
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FooterContainer />

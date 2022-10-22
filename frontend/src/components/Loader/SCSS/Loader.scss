@@ -1,0 +1,32 @@
+$mainBg_color: white;
+
+@mixin widHeightProp($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.loading {
+  @include widHeightProp(100wh, 100vh);
+  background-color: $mainBg_color;
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+
+  div {
+    @include widHeightProp(10vmax, 10vmax);
+    border-bottom: 5px solid rgba(14, 24, 36, 0.781);
+    border-radius: 50%;
+    animation:loadingRotate 800ms linear infinite;
+  }
+}
+
+// Animations
+@mixin animation-mixin($name, $to) {
+  @keyframes #{$name} {
+    to{
+        transform: rotateZ($to);
+    }
+  }
+}
+
+@include animation-mixin(loadingRotate, 360deg);

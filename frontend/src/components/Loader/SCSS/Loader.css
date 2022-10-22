@@ -1,0 +1,33 @@
+.loading {
+  width: 100wh;
+  height: 100vh;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+}
+
+.loading div {
+  width: 10vmax;
+  height: 10vmax;
+  border-bottom: 5px solid rgba(14, 24, 36, 0.781);
+  border-radius: 50%;
+  -webkit-animation: loadingRotate 800ms linear infinite;
+          animation: loadingRotate 800ms linear infinite;
+}
+
+@-webkit-keyframes loadingRotate {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes loadingRotate {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+/*# sourceMappingURL=Loader.css.map */
