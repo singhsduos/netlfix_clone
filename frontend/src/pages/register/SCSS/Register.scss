@@ -54,6 +54,7 @@
       margin-top: 2vmax;
       height: 4vmax;
       border-radius: 5px;
+      margin-bottom: -3vmax;
 
       input {
         flex: 9;
@@ -86,6 +87,24 @@
   border-radius: 5px !important;
   cursor: pointer;
 }
+
+.visibleUsername{
+  visibility: visible;
+  margin-top: -1vmax !important;
+  margin-bottom: 2px !important;
+}
+
+.hideUsername{
+   visibility: hidden;
+    margin-top: 2vmax !important;
+}
+
+.hideEmail{
+  visibility: hidden;
+}
+
+
+
 
 /*
  ______________________________________________
