@@ -30,7 +30,7 @@ export const register = async (userData, dispatch, alert, navigate) => {
       userData
     );
     
-    dispatch(registerSuccess(res.data));
+    dispatch(registerSuccess());
     navigate("/login");
     alert.success("Register Successfully, Please Login Again!");
   } catch (error) {

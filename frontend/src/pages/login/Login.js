@@ -18,7 +18,6 @@ const Login = () => {
         e.preventDefault();
         login({ email, password }, dispatch, alert);
     };
-    console.log(isFetching);
 
     return (
       <>
