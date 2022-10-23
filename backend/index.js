@@ -7,17 +7,27 @@ const userRoute = require("./routes/users");
 const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
 const cors = require("cors");
+const path = require("path");
+const logger = require("morgan");
 dotenv.config();
 
 
 
-const corsOptions = {
-    origin: '*',
-    credentials: true,            //access-control-allow-credentials:true
-    optionSuccessStatus: 200,
-}
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
-app.use(cors(corsOptions));
+
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// const corsOptions = {
+//     origin: '*',
+//     credentials: true,            //access-control-allow-credentials:true
+//     optionSuccessStatus: 200,
+// }
+
+// app.use(cors(corsOptions));
 
 
 
@@ -38,7 +48,20 @@ app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
 
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "../frontend/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
+
 
 app.listen(process.env.PORT || 9001, () => {
     console.log(`Backend server is running`);
 });
+
+module.exports = app;
