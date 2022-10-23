@@ -11,7 +11,7 @@ import {
 export const login = async (user, dispatch, alert) => {
     dispatch(loginStart());
     try {
-        const res = await axios.post("https://neelesh-netflix.herokuapp.com/api/auth/login", user);
+        const res = await axios.post("/api/auth/login", user);
         dispatch(loginSuccess(res.data));
     } catch (err) {
         dispatch(loginFailure());
@@ -26,7 +26,7 @@ export const register = async (userData, dispatch, alert, navigate) => {
   try {
 
     const res = await axios.post(
-      `https://neelesh-netflix.herokuapp.com/api/auth/register`,
+      `/api/auth/register`,
       userData
     );
     

@@ -15,11 +15,9 @@ dotenv.config();
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-
-app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 // const corsOptions = {
 //     origin: '*',
@@ -46,7 +44,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
-
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
